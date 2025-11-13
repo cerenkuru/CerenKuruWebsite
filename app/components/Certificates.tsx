@@ -4,7 +4,7 @@ import { certificates } from '@/app/lib/constants';
 
 export default function Certificates() {
     return (
-        <section id="certificates" className="py-20 px-6 bg-[#F5E6F0]">
+        <section id="certificates" className="py-20 px-6 bg-transparent">
             <div className="max-w-4xl mx-auto">
                 <h2 className="text-4xl font-bold text-center mb-16 text-gray-900">
                     Aldığım Sertifikalar
@@ -14,7 +14,7 @@ export default function Certificates() {
                     {certificates.map((cert) => (
                         <div
                             key={cert.id}
-                            className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow flex items-center justify-between"
+                            className="bg-white bg-opacity-70 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow flex items-center justify-between border border-gray-200"
                         >
                             <div>
                                 <h3 className="text-lg font-bold text-gray-900">{cert.title}</h3>

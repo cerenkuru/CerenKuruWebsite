@@ -8,13 +8,22 @@ export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
-        <header className="sticky top-0 z-50 bg-white border-b border-gray-100">
+        <header
+            className="sticky top-0 z-50 bg-[#faf6f6] border-b-2 border-gray-400"
+            style={{
+                backgroundImage: `
+              linear-gradient(90deg, #e8e8e8 1px, transparent 1px),
+              linear-gradient(0deg, #e8e8e8 1px, transparent 1px)
+            `,
+                backgroundSize: '30px 30px',
+            }}
+        >
             <nav className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
                 <div className="text-2xl font-bold bg-gradient-to-r from-[#2C3E7F] to-[#D4A5D4] bg-clip-text text-transparent">
                     Ceren
                 </div>
 
-                {/* Desktop Menu */}
+                {/* Desktop */}
                 <div className="hidden md:flex gap-8">
                     {navItems.map((item) => (
                         <a
@@ -27,7 +36,7 @@ export default function Header() {
                     ))}
                 </div>
 
-                {/* Mobile Menu Button */}
+                {/* Mobile */}
                 <button
                     className="md:hidden text-[#2C3E7F]"
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -35,10 +44,16 @@ export default function Header() {
                     {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
                 </button>
             </nav>
-
-            {/* Mobile Menu */}
             {isMenuOpen && (
-                <div className="md:hidden bg-white border-t border-gray-100 px-6 py-4 flex flex-col gap-4">
+                <div className="bg-[#faf6f6] border-t-2 border-gray-300 px-6 py-4 flex flex-col gap-4"
+                    style={{
+                        backgroundImage: `
+                      linear-gradient(90deg, #e8e8e8 1px, transparent 1px),
+                      linear-gradient(0deg, #e8e8e8 1px, transparent 1px)
+                    `,
+                        backgroundSize: '30px 30px',
+                    }}
+                >
                     {navItems.map((item) => (
                         <a
                             key={item.name}

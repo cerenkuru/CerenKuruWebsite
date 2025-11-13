@@ -4,7 +4,7 @@ import { socialLinks } from '@/app/lib/constants';
 
 export default function Hero() {
     return (
-        <section id="home" className="min-h-screen flex items-center justify-center px-6 py-20 bg-gradient-to-br from-white via-white to-[#F5E6F0]">
+        <section id="home" className="min-h-screen flex items-center justify-center px-6 py-20 bg-transparent">
             <div className="max-w-3xl mx-auto text-center">
                 <div className="mb-8 inline-block">
                     <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#2C3E7F] to-[#D4A5D4] flex items-center justify-center">
@@ -22,13 +22,13 @@ export default function Hero() {
                     Web geliştirici ve tasarımcı. Modern, kullanıcı dostu ve etkileyici dijital çözümler oluşturmaktan tutkulu.
                 </p>
 
-                <div className="flex gap-4 justify-center mb-12">
-                    <button className="px-8 py-3 bg-[#2C3E7F] text-white rounded-full font-medium hover:bg-[#1F2A5C] transition-colors shadow-lg hover:shadow-xl">
+                <div className="flex gap-4 justify-center mb-12 flex-wrap">
+                    <a href="#projects" className="px-8 py-3 bg-[#2C3E7F] text-white rounded-full font-medium hover:bg-[#1F2A5C] transition-colors shadow-lg hover:shadow-xl">
                         Projelerimi Görüntüle
-                    </button>
-                    <button className="px-8 py-3 border-2 border-[#2C3E7F] text-[#2C3E7F] rounded-full font-medium hover:bg-[#F5E6F0] transition-colors">
+                    </a>
+                    <a href="#contact" className="px-8 py-3 border-2 border-[#2C3E7F] text-[#2C3E7F] rounded-full font-medium hover:bg-[#F5E6F0] transition-colors">
                         Benimle İletişime Geç
-                    </button>
+                    </a>
                 </div>
 
                 <div className="flex gap-6 justify-center text-sm text-gray-600">
