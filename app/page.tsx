@@ -9,9 +9,9 @@ import Contact from '@/app/components/Contact';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-b bg-[#f9f2f1] p-4 md:p-8">
+    <div className="min-h-screen bg-gradient-to-b bg-[#f3efeb] p-4 md:p-8">
       <div
-        className="max-w-5xl mx-auto bg-[#faf6f6] rounded-2xl border-2 border-[#2C3E7F] shadow-xl overflow-hidden"
+        className="max-w-5xl mx-auto bg-[#f3efeb] rounded-2xl border-2 border-[#c1c2c3] shadow-xl overflow-hidden"
         style={{
           backgroundImage: `
             linear-gradient(90deg, #e8e8e8 1px, transparent 1px),
@@ -21,8 +21,12 @@ export default function Home() {
         }}
       >
         <div className="relative">
-          <div className="absolute left-12 top-0 bottom-0 w-0.5 bg-red-300 pointer-events-none z-0"></div>
-          <div className="absolute right-12 top-0 bottom-0 w-0.5 bg-red-300 pointer-events-none z-0"></div>
+          {/* Sol Margin Çizgisi - Responsive */}
+          <div className="absolute left-4 sm:left-8 md:left-12 lg:left-16 top-0 bottom-0 w-0.5 bg-red-300 pointer-events-none z-40"></div>
+
+          {/* Sağ Margin Çizgisi - Responsive */}
+          <div className="absolute right-4 sm:right-8 md:right-12 lg:right-16 top-0 bottom-0 w-0.5 bg-red-300 pointer-events-none z-40"></div>
+
           <div className="relative z-10">
             <Header />
             <div className="divide-y divide-gray-300">
@@ -31,8 +35,8 @@ export default function Home() {
               <Certificates />
               <About />
               <Contact />
+              {/* <Footer /> */}
             </div>
-            {/* <Footer /> */}
           </div>
         </div>
       </div>

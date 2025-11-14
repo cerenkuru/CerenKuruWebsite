@@ -6,7 +6,11 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        patrick: ["var(--font-patrick-hand)", "cursive"],
+      },
+    },
   },
   plugins: [],
 };

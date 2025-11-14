@@ -10,13 +10,13 @@ export default function Contact() {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                     <a
                         href="mailto:your-email@example.com"
-                        className="px-8 py-3 bg-[#2C3E7F] text-white rounded-full font-bold hover:bg-[#1F2A5C] transition-colors"
+                        className="px-8 py-3 bg-[#87B3C8] text-white rounded-full font-bold hover:bg-[#1F2A5C] transition-colors"
                     >
                         E-mail Gönder
                     </a>
                     <a
                         href="#"
-                        className="px-8 py-3 border-2 border-[#2C3E7F] text-[#2C3E7F] rounded-full font-medium hover:bg-[#F5E6F0] transition-colors"
+                        className="px-8 py-3 border-2 border-[#87B3C8] text-[#87B3C8] rounded-full font-medium hover:bg-[#F5E6F0] transition-colors"
                     >
                         LinkedIn
                     </a>

@@ -1,9 +1,9 @@
 export const navItems = [
-    { name: 'Ana Sayfa', href: '#home' },
-    { name: 'Projelerim', href: '#projects' },
-    { name: 'Sertifikalar', href: '#certificates' },
-    { name: 'Hakkımda', href: '#about' },
-    { name: 'İletişim', href: '#contact' },
+    { name: 'Home', href: '#home' },
+    { name: 'Projects', href: '#projects' },
+    { name: 'Certificates', href: '#certificates' },
+    { name: 'About Me', href: '#about' },
+    { name: 'Contact Me', href: '#contact' },
 ];
 
 export const projects = [
