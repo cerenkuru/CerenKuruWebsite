@@ -1,42 +1,55 @@
 "use client";
-
-import { socialLinks } from '@/app/lib/constants';
+import Image from 'next/image';
+import ceku from '@/public/ceku.png';
 
 export default function Hero() {
-    return (
-        <section id="home" className="flex items-center justify-center px-6 py-30 bg-transparent">
-            <div className="max-w-3xl mx-auto text-center">
-                <div className="mb-8 inline-block">
-                    <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#87B3C9] to-[#87B3C9] flex items-center justify-center">
-                        <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center text-4xl font-bold text-[#87B3C9]">
-                            C
-                        </div>
-                    </div>
-                </div>
+    const colors = ['#FF6B6B', '#FF6B6B', '#FF6B6B', '#68b56e', '#87B3C9', '#87B3C9', '#E3D967'];
+    const text = 'Front End Developer';
 
-                <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-                    Merhaba, ben <span className="bg-gradient-to-r from-[#FF6B6B] to-[#FF6B6B] bg-clip-text text-transparent">Ceren</span>
+    const coloredText = text.split('').map((char, index) => {
+        const color = colors[index % colors.length];
+        return { char, color };
+    });
+
+    return (
+        <section id="home" className="flex items-center  bg-transparent gap-8">
+            {/* Sol - Yazı */}
+            <div className="w-full lg:w-2/3 font-thin flex pt-7 flex-col justify-center pl-6 sm:pl-12 md:pl-20 lg:pl-32 pr-6">
+                <h1 className="text-xl sm:text-3xl md:text-6xl font-thin text-gray-900 leading-none">
+                    Hello, I&apos;m <span className="text-gray-900 bg-clip-text">Ceren! </span> <br />
+                    <span className="font-thin text-2xl sm:text-3xl md:text-4xl">
+                        {coloredText.map((item, index) => (
+                            <span key={index} style={{ color: item.color }}>
+                                {item.char}
+                            </span>
+                        ))}
+                        .
+                    </span>
                 </h1>
 
-                <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                    Web geliştirici ve tasarımcı. Modern, kullanıcı dostu ve etkileyici dijital çözümler oluşturmaktan tutkulu.
+                <p className="text-lg sm:text-xl text-gray-600 mb-8 mt-6 leading-relaxed max-w-lg">
+                    Modern, kullanıcı dostu ve etkileyici dijital çözümler oluşturmaktan tutkulu.
                 </p>
 
-                <div className="flex gap-4 justify-center mb-12 flex-wrap">
-                    <a href="#projects" className="px-8 py-3 bg-[#87B3C8] text-white rounded-full font-medium hover:bg-[#87B3C9] transition-colors shadow-lg hover:shadow-xl">
+                {/* <div className="flex gap-4 mb-12 flex-wrap">
+                    <a href="#projects" className="px-8 py-3 bg-[#87B3C8] text-white rounded-full font-medium hover:bg-[#6b94ad] transition-colors shadow-lg hover:shadow-xl">
                         Projelerimi Görüntüle
                     </a>
                     <a href="#contact" className="px-8 py-3 border-2 border-[#87B3C9] text-[#87B3C9] rounded-full font-medium hover:bg-[#F5E6F0] transition-colors">
-                        Benimle İletişime Geç
+                        İletişime Geç
                     </a>
-                </div>
+                </div> */}
+            </div>
 
-                <div className="flex gap-6 justify-center text-sm text-gray-600">
-                    {socialLinks.map((link) => (
-                        <a key={link.name} href={link.url} className="hover:text-[#2C3E7F] transition-colors">
-                            {link.name}
-                        </a>
-                    ))}
+            {/* Sağ - Görsel Alanı */}
+            <div className="hidden lg:flex w-2/3 items-center justify-center pt-25 pr-5 lg:pr-18">
+                <div className="relative w-80 h-80">
+                    <Image
+                        src={ceku}
+                        alt="Ceren"
+                        className="object-cover rounded-lg"
+                        priority
+                    />
                 </div>
             </div>
         </section>

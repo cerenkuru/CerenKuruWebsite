@@ -44,17 +44,17 @@ export default function Header() {
                 </div>
 
                 {/* Desktop Icons - Sağda */}
-                <div className="hidden md:flex gap-4 xl:gap-6 flex-shrink-0">
+                <div className="hidden md:flex gap-3 xl:gap-4 flex-shrink-0">
                     {socialIcons.map((social) => {
                         const Icon = social.icon;
                         return (
                             <a
                                 key={social.name}
                                 href={social.url}
-                                className="text-gray-500 hover:text-[#dd746e] transition-colors"
+                                className="flex items-center justify-center w-7 h-7 rounded-full bg-[#87B3C8] text-white hover:bg-[#6b94ad] transition-colors"
                                 title={social.name}
                             >
-                                <Icon size={18} />
+                                <Icon size={16} />
                             </a>
                         );
                     })}
@@ -99,10 +99,10 @@ export default function Header() {
                                 <a
                                     key={social.name}
                                     href={social.url}
-                                    className="text-gray-500 hover:text-[#dd746e] transition-colors"
+                                    className="flex items-center justify-center w-8 h-8 rounded-full bg-[#87B3C8] text-white hover:bg-[#6b94ad] transition-colors"
                                     title={social.name}
                                 >
-                                    <Icon size={20} />
+                                    <Icon size={18} />
                                 </a>
                             );
                         })}
