@@ -14,7 +14,7 @@ export default function Hero() {
     return (
         <section id="home" className="flex items-center  bg-transparent gap-8">
             {/* Sol - Yazı */}
-            <div className="w-full lg:w-2/3 font-thin flex pt-7 flex-col justify-center pl-6 sm:pl-12 md:pl-20 lg:pl-32 pr-6">
+            <div className="w-full lg:w-2/3 font-thin flex pt-7 flex-col justify-center pl-6 sm:pl-12 md:pl-20 lg:pl-28 pr-6">
                 <h1 className="text-xl sm:text-3xl md:text-6xl font-thin text-gray-900 leading-none">
                     Hello, I&apos;m <span className="text-gray-900 bg-clip-text">Ceren! </span> <br />
                     <span className="font-thin text-2xl sm:text-3xl md:text-4xl">
@@ -27,18 +27,10 @@ export default function Hero() {
                     </span>
                 </h1>
 
-                <p className="text-lg sm:text-xl text-gray-600 mb-8 mt-6 leading-relaxed max-w-lg">
-                    Modern, kullanıcı dostu ve etkileyici dijital çözümler oluşturmaktan tutkulu.
+                <p className="text-lg sm:text-[16.2px] text-gray-600 mb-8 mt-6 leading-relaxed max-w-lg">
+                    I love crafting fun, interactive, and user-friendly web designs. I never code without my coffee, and never align pixels without good music. ✨ <br />
+                    Let’s build something awesome together!
                 </p>
-
-                {/* <div className="flex gap-4 mb-12 flex-wrap">
-                    <a href="#projects" className="px-8 py-3 bg-[#87B3C8] text-white rounded-full font-medium hover:bg-[#6b94ad] transition-colors shadow-lg hover:shadow-xl">
-                        Projelerimi Görüntüle
-                    </a>
-                    <a href="#contact" className="px-8 py-3 border-2 border-[#87B3C9] text-[#87B3C9] rounded-full font-medium hover:bg-[#F5E6F0] transition-colors">
-                        İletişime Geç
-                    </a>
-                </div> */}
             </div>
 
             {/* Sağ - Görsel Alanı */}
