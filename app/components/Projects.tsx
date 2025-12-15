@@ -67,7 +67,7 @@ export default function Projects() {
                             padding: '1.5rem',
                             background: '#f3efeb',
                             borderRadius: '8% 9% 7% 10% / 10% 8% 9% 7%',
-                            border: '3px solid #68b56e',
+                            border: '3px solid #8a8a8a',
                             transform: 'rotate(-0.5deg)',
                             boxShadow: '0 10px 25px rgba(0,0,0,0.1)'
                         }}
@@ -81,7 +81,7 @@ export default function Projects() {
                             }}
                         >
                             <div
-                                className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-[#68b56e] shadow-md"
+                                className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-[#3a3a3a] shadow-md"
                                 style={{
                                     borderRadius: '48% 52% 51% 49%'
                                 }}
@@ -97,7 +97,7 @@ export default function Projects() {
                             }}
                         >
                             <div
-                                className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-[#68b56e] shadow-md"
+                                className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-[#3a3a3a] shadow-md"
                                 style={{
                                     borderRadius: '52% 48% 49% 51%'
                                 }}
@@ -109,7 +109,7 @@ export default function Projects() {
                             className="w-full h-full p-5 overflow-hidden transition-all duration-500"
                             style={{
                                 borderRadius: '6% 7% 5% 8% / 8% 6% 7% 5%',
-                                border: '2px solid #68b56e',
+                                border: '2px solid #8a8a8a',
                                 transform: 'rotate(0.3deg)',
                                 background: isOn ? 'rgba(255, 255, 255, 0.95)' : '#1a1a1a'
                             }}
@@ -148,20 +148,22 @@ export default function Projects() {
                     {/* Kumanda - Perspektif ile yerde */}
                     <div className="mt-12 flex justify-center">
                         <div
-                            className="relative bg-[#e8e4df] p-5 shadow-2xl"
+                            className="relative bg-[#3a3a3a] p-4 shadow-2xl"
                             style={{
-                                width: '90px',
-                                transform: 'perspective(250px) rotateX(25deg) rotate(-1deg)',
-                                borderRadius: '25% 22% 20% 23% / 18% 21% 19% 20%',
-                                border: '2px solid #8a8a8a',
-                                boxShadow: '0 20px 40px rgba(0,0,0,0.2), inset 2px 2px 0 rgba(255,255,255,0.3)'
+                                width: '70px',
+                                paddingTop: '1.2rem',
+                                paddingBottom: '2rem',
+                                transform: 'perspective(250px) rotateX(25deg) rotate(-0.5deg)',
+                                borderRadius: '6px',
+                                border: '2px solid #2a2a2a',
+                                boxShadow: '0 20px 40px rgba(0,0,0,0.3), inset 1px 1px 0 rgba(255,255,255,0.1)'
                             }}
                         >
                             {/* Kapat Tuşu */}
                             <div className="flex justify-center mb-4">
                                 <button
                                     onClick={togglePower}
-                                    className={`w-10 h-10 rounded-full flex items-center justify-center transition-all ${isOn ? 'bg-red-500 hover:bg-[#dd746e]' : 'bg-gray-700 hover:bg-gray-600'
+                                    className={`w-8 h-8 rounded-full flex items-center justify-center transition-all ${isOn ? 'bg-red-500 hover:bg-[#dd746e]' : 'bg-gray-700 hover:bg-gray-600'
                                         }`}
                                     style={{
                                         borderRadius: '48% 52% 50% 50% / 52% 48% 50% 50%',
@@ -170,12 +172,12 @@ export default function Projects() {
                                             : 'inset 0 2px 4px rgba(0,0,0,0.5)'
                                     }}
                                 >
-                                    <Power size={20} className="text-white" />
+                                    <Power size={18} className="text-white" />
                                 </button>
                             </div>
 
                             {/* Gösterge Noktaları */}
-                            <div className="flex gap-2 items-center justify-center mb-4">
+                            <div className="flex gap-2 mt-8 items-center justify-center mb-3">
                                 {projects.map((_, index) => (
                                     <div
                                         key={index}

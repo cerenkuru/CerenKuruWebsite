@@ -30,24 +30,29 @@ export const projects = [
 export const certificates = [
     {
         id: 1,
-        title: 'Sertifika 1',
-        organization: 'Kurum adı',
-        year: 2023,
+        title: "React - The Complete Guide 2024",
+        subtitle: "(incl. Next.js, Redux)",
+        organization: "Maximilian Schwarzmüller",
+        platform: "Udemy",
+        duration: "68.5 hours"
     },
     {
         id: 2,
-        title: 'Sertifika 2',
-        organization: 'Kurum adı',
-        year: 2024,
+        title: "Mobil Teknolojiler",
+        organization: "Microfon",
+        platform: "Gelecek Hayalim"
     },
     {
         id: 3,
-        title: 'Sertifika 3',
-        organization: 'Kurum adı',
-        year: 2024,
+        title: "Siber Güvenlik",
+        organization: "Gelecek Hayalim Eğitimleri"
     },
+    {
+        id: 4,
+        title: "Git ve GitHub",
+        organization: "BTK Akademi"
+    }
 ];
-
 export const socialLinks = [
     { name: 'LinkedIn', url: '#' },
     { name: 'GitHub', url: '#' },
