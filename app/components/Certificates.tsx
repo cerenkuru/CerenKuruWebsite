@@ -16,12 +16,11 @@ export default function Certificates() {
                 <h2 className="text-3xl font-bold text-gray-900 mb-10 text-center">
                     Certificates
                 </h2>
-
                 {/* Mantar Pano */}
                 <div
                     className="relative bg-[#c9a876] p-5 mx-auto shadow-xl"
                     style={{
-                        maxWidth: "900px", // ⬅️ kareye daha yakın pano
+                        maxWidth: "900px",
                         borderRadius: "2%",
                         border: "6px solid #8b6f47",
                         boxShadow:
