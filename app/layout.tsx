@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Patrick_Hand } from "next/font/google";
+import { Geist, Geist_Mono, Patrick_Hand, Tiny5 } from "next/font/google";
+
 import "./styles/globals.css";
 
 const geistSans = Geist({
@@ -18,6 +19,13 @@ const patrickHand = Patrick_Hand({
   subsets: ["latin"],
 });
 
+const tiny5 = Tiny5({
+  variable: "--font-tiny5",
+  weight: "400",
+  subsets: ["latin"],
+});
+
+
 export const metadata: Metadata = {
   title: "Ceren - Portfolio",
   description: "Web geliştirici ve tasarımcı",
@@ -31,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang="tr">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${patrickHand.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${tiny5.variable} ${patrickHand.variable} antialiased`}
       >
         {children}
       </body>

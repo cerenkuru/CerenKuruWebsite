@@ -36,7 +36,7 @@ export default function About() {
         <section id="about" className="py-20 px-6 bg-transparent pl-25 pr-25">
             <div className="max-w-7xl mx-auto">
 
-                <h2 className="text-4xl font-thin text-gray-900 mb-12">
+                <h2 className="text-4xl font-thin text-gray-900 mb-8">
                     About Me
                 </h2>
 

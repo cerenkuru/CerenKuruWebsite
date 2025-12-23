@@ -7,21 +7,49 @@ import crossedLeg from '@/public/crossed-leg.png';
 
 const projects = [
     {
-        title: "E-Commerce Platform",
-        description: "Built with Next.js and TypeScript",
-        tags: ["Next.js", "TypeScript", "Tailwind"]
+        title: "Northwind",
+        description:
+            "React app using Redux and Redux Thunk with filtering, cart management, and async state handling.",
+        tags: ["React", "Redux", "Redux Thunk"]
     },
     {
-        title: "Portfolio Website",
-        description: "Personal portfolio showcasing projects",
-        tags: ["React", "CSS", "Design"]
+        title: "Monster Hunting",
+        description:
+            "A fun monster hunting game built with VueJS and basic game logic.",
+        tags: ["VueJS", "JavaScript"]
     },
     {
-        title: "Task Manager",
-        description: "Productivity app for managing daily tasks",
-        tags: ["React", "Node.js"]
+        title: "React Events",
+        description:
+            "Event management app with CRUD operations using React Router and backend integration.",
+        tags: ["React", "React Router", "Full Stack"]
+    },
+    {
+        title: "React Poster",
+        description:
+            "Full-stack content sharing platform where users can create and view posts.",
+        tags: ["React", "Full Stack"]
+    },
+    {
+        title: "React Expenses",
+        description:
+            "Expense tracker with yearly filtering and chart-based data visualization.",
+        tags: ["React", "Charts", "State Management"]
+    },
+    {
+        title: "Challenge w Deadline",
+        description:
+            "Task and deadline manager built with Vite, Context API, and animations.",
+        tags: ["React", "Vite", "Context API"]
+    },
+    {
+        title: "Foodies",
+        description:
+            "Next.js food app with recipes, ordering features, and dynamic data handling.",
+        tags: ["Next.js", "React"]
     }
 ];
+
 
 export default function Projects() {
     const [currentIndex, setCurrentIndex] = useState(0);

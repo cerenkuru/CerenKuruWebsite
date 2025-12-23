@@ -28,8 +28,36 @@ export default function Hero() {
                 </h1>
 
                 <p className="text-lg sm:text-[16.2px] text-gray-600 mb-8 mt-6 leading-relaxed max-w-lg">
-                    I love crafting fun, interactive, and user-friendly web designs. I never code without my coffee, and never align pixels without good music. ✨ <br />
-                    Let’s build something awesome together!
+                    I love crafting{' '}
+                    <span className="inline-block font-bold text-[#FF6B6B]">
+                        fun
+                    </span>
+                    ,{' '}
+                    <span className="inline-block animate-bounce hover:scale-110 transition-transform font-bold text-[#68b56e]">
+                        interactive
+                    </span>
+                    , and user-friendly web designs. I never code without my{' '}
+                    <span className="inline-block font-bold text-[#6c1d14ca]">
+                        coffee ☕️
+                    </span>
+                    , and never align{' '}
+                    <span
+                        className="inline-block font-bold pl-1 pb-1 text-[#87B3C9]"
+                        style={{
+                            fontFamily: 'var(--font-tiny5)',
+                            textShadow: '2px 2px 0px rgba(0,0,0,0.2)',
+                            letterSpacing: '2px',
+                            fontSize: '0.9em'
+                        }}
+                    >
+                        pixels
+                    </span>
+                    {' '}without good music. ✨ <br />
+                    Let's build something{' '}
+                    <span className="inline-block font-extrabold text-[#FF6B6B]">
+                        awesome
+                    </span>
+                    {' '}together!
                 </p>
             </div>
 
