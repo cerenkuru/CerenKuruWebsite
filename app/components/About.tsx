@@ -2,34 +2,10 @@
 import Image from "next/image";
 import crossedLegLaptop from "@/public/crossed-leg-laptop.png";
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useTypewriter } from "../hooks/useTypeWriter";
 
 export default function About() {
-    const fullText = "~ Ceren ✨";
-    const [displayedText, setDisplayedText] = useState("");
-
-    useEffect(() => {
-        let index = 0;
-        let timeoutId: NodeJS.Timeout;
-
-        const type = () => {
-            if (index <= fullText.length) {
-                setDisplayedText(fullText.slice(0, index));
-                index++;
-                timeoutId = setTimeout(type, 120);
-            } else {
-                timeoutId = setTimeout(() => {
-                    index = 0;
-                    setDisplayedText("");
-                    type();
-                }, 1500);
-            }
-        };
-
-        type();
-
-        return () => clearTimeout(timeoutId);
-    }, []);
+    const fullText = useTypewriter("~ Ceren ✨", 120, 1500);
 
 
     return (
@@ -147,7 +123,7 @@ export default function About() {
 
                 <div className="flex justify-end pr-10">
                     <span className="text-gray-600 text-lg">
-                        {displayedText}
+                        {fullText}
                         <span className="ml-0.5 animate-pulse">|</span>
 
                     </span>
