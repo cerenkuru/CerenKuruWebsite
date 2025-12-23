@@ -23,7 +23,7 @@ export default function Contact() {
                     ))}
                 </h2>
 
-                <div className="text-lg mb-5 text-gray-700 space-y-2">
+                <div className="text-lg mb-3 text-gray-700 space-y-1">
                     <p>
                         If youd like to work together on a project, have a question,
                     </p>
@@ -36,7 +36,7 @@ export default function Contact() {
                     </p>
                 </div>
 
-                <div className="relative flex flex-col sm:flex-row gap-4 justify-center pl-10 items-center mb-12">
+                <div className="relative flex flex-col sm:flex-row gap-4 justify-center pl-20 items-center mb-12">
                     <a
                         href="mailto:ceren.kuru16@icloud.com"
                         className="px-6 py-2 bg-[#87B3C8] text-white rounded-full font-bold hover:bg-[#1F2A5C] transition-colors"

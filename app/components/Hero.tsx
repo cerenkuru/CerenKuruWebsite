@@ -45,11 +45,7 @@ export default function Hero() {
                         pixels
                     </span>
                     {' '}without good music. ✨ <br />
-                    Lets build something{' '}
-                    <span className="inline-block font-extrabold text-[#FF6B6B]">
-                        awesome
-                    </span>
-                    {' '}together!
+                    Lets build something awesome together!
                 </p>
             </div>
 

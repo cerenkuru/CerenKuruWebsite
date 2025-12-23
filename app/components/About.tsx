@@ -29,14 +29,13 @@ export default function About() {
                     ))}
 
                     {' '}
-                    who enjoys building{' '}
-                    clean
-                    ,{' '}
+                    who enjoys building clean
+                    ,
                     user-focused
                     , and{' '}
                     <span className="font-bold animate-pulse text-[#FF6B6B]">
                         interactive{' '}
-                    </span>{' '}
+                    </span>
                     web experiences. I care deeply about writing{' '}
                     <span
                         className="inline-block font-bold text-[#000000]"
@@ -47,11 +46,7 @@ export default function About() {
                     >
                         readable code
                     </span>{' '}
-                    and creating interfaces that feel{' '}
-                    <span className="font-bold text-[#2C3E7F]">
-                        intuitive
-                    </span>
-                    , modern, and purposeful.
+                    and creating interfaces that feel intuitive, modern and purposeful.
                 </p>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-12 items-center">
@@ -77,7 +72,7 @@ export default function About() {
                         >
                             {[
                                 'React & modern JavaScript (ES6+)',
-                                'TypeScript (because bugs are not my friends)',
+                                'TypeScript (because bugs 👾 are not my friends)',
                                 'Component-based architecture',
                                 'Responsive & accessible UI',
                                 'Clean, maintainable code with performance in mind'
@@ -125,9 +120,9 @@ export default function About() {
 
                     <motion.div
                         className="hidden lg:flex justify-end"
-                        animate={{ y: [0, -6, 0] }}
+                        animate={{ y: [0, -10, 0] }}
                         transition={{
-                            duration: 4,
+                            duration: 2,
                             repeat: Infinity,
                             ease: "easeInOut"
                         }}
