@@ -3,10 +3,11 @@ import Image from "next/image";
 import crossedLegLaptop from "@/public/crossed-leg-laptop.png";
 import { motion } from "framer-motion";
 import { useTypewriter } from "../hooks/useTypeWriter";
+import { useColorfulText } from "../hooks/useColorfulText";
 
 export default function About() {
     const fullText = useTypewriter("~ Ceren ✨", 120, 1500);
-
+    const text = useColorfulText("front-end developer");
 
     return (
         <section id="about" className="py-20 px-6 bg-transparent pl-25 pr-25">
@@ -17,9 +18,40 @@ export default function About() {
                 </h2>
 
                 <p className="text-lg text-gray-800 leading-relaxed mb-12">
-                    Im a passionate front-end developer who enjoys building clean, user-focused,
-                    and interactive web experiences. I care about writing readable code and creating
-                    interfaces that feel intuitive, modern, and purposeful.
+                    I&apos;m a{' '} passionate{' '}
+                    {text.map((item, index) => (
+                        <span
+                            key={index}
+                            style={{ color: item.color }}
+                        >
+                            {item.char}
+                        </span>
+                    ))}
+
+                    {' '}
+                    who enjoys building{' '}
+                    clean
+                    ,{' '}
+                    user-focused
+                    , and{' '}
+                    <span className="font-bold animate-pulse text-[#FF6B6B]">
+                        interactive{' '}
+                    </span>{' '}
+                    web experiences. I care deeply about writing{' '}
+                    <span
+                        className="inline-block font-bold text-[#000000]"
+                        style={{
+                            fontFamily: 'var(--font-tiny5)',
+                            fontSize: '0.9em'
+                        }}
+                    >
+                        readable code
+                    </span>{' '}
+                    and creating interfaces that feel{' '}
+                    <span className="font-bold text-[#2C3E7F]">
+                        intuitive
+                    </span>
+                    , modern, and purposeful.
                 </p>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-12 items-center">

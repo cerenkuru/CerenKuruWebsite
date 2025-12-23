@@ -1,15 +1,10 @@
 "use client";
 import Image from 'next/image';
 import ceku from '@/public/ceku.png';
+import { useColorfulText } from '../hooks/useColorfulText';
 
 export default function Hero() {
-    const colors = ['#FF6B6B', '#FF6B6B', '#FF6B6B', '#68b56e', '#87B3C9', '#87B3C9', '#E3D967'];
-    const text = 'Front End Developer';
-
-    const coloredText = text.split('').map((char, index) => {
-        const color = colors[index % colors.length];
-        return { char, color };
-    });
+    const coloredText = useColorfulText("Front End Developer");
 
     return (
         <section id="home" className="flex items-center  bg-transparent gap-8">

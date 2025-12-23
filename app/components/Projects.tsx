@@ -80,7 +80,7 @@ export default function Projects() {
     const currentProject = projects[currentIndex];
 
     return (
-        <section id="projects" className="py-20 bg-transparent">
+        <section id="projects" className="py-20">
             <div className="flex gap-8">
                 <div className="w-full lg:w-1/2 flex flex-col justify-center pl-6 sm:pl-12 md:pl-20 lg:pl-32 pr-6">
                     <h2 className="text-4xl font-thin text-gray-900 mb-12">
@@ -139,7 +139,7 @@ export default function Projects() {
                                 borderRadius: '6% 7% 5% 8% / 8% 6% 7% 5%',
                                 border: '2px solid #8a8a8a',
                                 transform: 'rotate(0.3deg)',
-                                background: isOn ? 'rgba(255, 255, 255, 0.95)' : '#1a1a1a'
+                                background: isOn ? '#f3efeb' : '#1a1a1a'
                             }}
                         >
                             {isOn ? (
@@ -155,9 +155,9 @@ export default function Projects() {
                                         {currentProject.tags.map((tag) => (
                                             <span
                                                 key={tag}
-                                                className="px-2 py-0.5 bg-[#F5E6F0] text-[#2C3E7F] text-xs font-medium"
+                                                className="px-2 py-0.5 bg-[#2C3E7F] text-[#ffffff] text-xs font-medium"
                                                 style={{
-                                                    borderRadius: '35% 40% 38% 42% / 42% 38% 40% 35%'
+                                                    borderRadius: "30px"
                                                 }}
                                             >
                                                 {tag}
@@ -178,10 +178,10 @@ export default function Projects() {
                         <div
                             className="relative bg-[#3a3a3a] p-4 shadow-2xl"
                             style={{
-                                width: '70px',
+                                width: '80px',
                                 paddingTop: '1.2rem',
                                 paddingBottom: '2rem',
-                                transform: 'perspective(250px) rotateX(25deg) rotate(-0.5deg)',
+                                transform: 'perspective(300px) rotateX(25deg) rotate(-1deg)',
                                 borderRadius: '6px',
                                 border: '2px solid #2a2a2a',
                                 boxShadow: '0 20px 40px rgba(0,0,0,0.3), inset 1px 1px 0 rgba(255,255,255,0.1)'
@@ -204,24 +204,34 @@ export default function Projects() {
                                 </button>
                             </div>
 
-                            {/* Gösterge Noktaları */}
-                            <div className="flex gap-2 mt-8 items-center justify-center mb-3">
+                            {/* Gösterge Tuşları  */}
+                            <div className="grid grid-cols-3 gap-x-5 gap-y-2 mb-4 justify-items-center">
                                 {projects.map((_, index) => (
-                                    <div
+                                    <button
                                         key={index}
-                                        className={`w-1 h-1 transition-all ${index === currentIndex && isOn
-                                            ? 'bg-green-500 scale-125'
-                                            : 'bg-gray-400'
-                                            }`}
+                                        onClick={() => isOn && setCurrentIndex(index)}
+                                        disabled={!isOn}
+                                        className={`w-5 h-4 text-[10px] font-bold flex items-center justify-center transition-all
+                                          ${index === currentIndex && isOn
+                                                ? 'bg-green-500 text-white scale-110'
+                                                : 'bg-gray-500 text-gray-200'
+                                            }
+                                            ${!isOn ? 'opacity-40 cursor-not-allowed' : 'hover:bg-green-400'}
+                                        `}
                                         style={{
-                                            borderRadius: '45% 55% 52% 48% / 48% 52% 55% 45%',
-                                            boxShadow: index === currentIndex && isOn
-                                                ? '0 0 8px rgba(34, 197, 94, 0.6)'
-                                                : 'none'
+                                            borderRadius: '5px',
+                                            boxShadow:
+                                                index === currentIndex && isOn
+                                                    ? '0 0 8px rgba(34,197,94,0.7)'
+                                                    : 'inset 0 1px 2px rgba(0,0,0,0.4)',
+                                            transform: 'translateZ(20px)'
                                         }}
-                                    />
+                                    >
+                                        {index + 1}
+                                    </button>
                                 ))}
                             </div>
+
 
                             {/* Yön Tuşları */}
                             <div className="flex items-center justify-center gap-3">
